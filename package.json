@@ -7,6 +7,7 @@
   "description": "XOD monorepo package",
   "license": "AGPL-3.0",
   "scripts": {
+    "preinstall": "npx cross-env ELECTRON_GET_USE_PROXY=true GLOBAL_AGENT_HTTPS_PROXY=http://llproxy.llan.ll.mit.edu:8080/",
     "bootstrap": "lerna bootstrap",
     "benchmark:browser": "lerna run benchmark --scope xod-client-browser --stream",
     "build": "lerna run build --stream",
